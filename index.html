@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[Aman] | Personal Resume</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 1rem;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #0077ff;
+}
+
+section {
+    padding: 100px 10%;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #0077ff, #00c6ff);
+    color: white;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
+
+.hero h2 {
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+.hero p {
+    max-width: 600px;
+}
+
+.btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: white;
+    color: #0077ff;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #f1f1f1;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2rem;
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.skill {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.skill-bar {
+    height: 8px;
+    background: #ddd;
+    border-radius: 5px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.skill-bar span {
+    display: block;
+    height: 100%;
+    background: #0077ff;
+}
+
+.timeline {
+    position: relative;
+    margin: 50px 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: #0077ff;
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    width: 50%;
+    padding: 20px;
+    position: relative;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    width: 15px;
+    height: 15px;
+    background: #0077ff;
+    border-radius: 50%;
+}
+
+.timeline-item:nth-child(odd)::before {
+    right: -8px;
+}
+
+.timeline-item:nth-child(even)::before {
+    left: -8px;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.contact {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    color: white;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s ease;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media(max-width: 768px) {
+    .timeline::before {
+        left: 10px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 30px;
+        margin-bottom: 30px;
+        text-align: left !important;
+        left: 0 !important;
+    }
+
+    .timeline-item::before {
+        left: 2px !important;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+    <h1>[Aman]</h1>
+    <h2>[Drop shipping Specialist]</h2>
+    <p>I help businesses grow through smart strategies, modern tools, and creative problem-solving.</p>
+    <a href="#contact" class="btn">Contact Me</a>
+</section>
+
+<section id="about" class="fade-in">
+    <h2 class="section-title">About Me</h2>
+    <p>I am a passionate professional specializing in [Drop shipping]. I focus on delivering measurable results, optimizing workflows, and building scalable systems.</p>
+</section>
+
+<section id="skills" class="fade-in">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills">
+        <div class="skill">
+            Marketing
+            <div class="skill-bar"><span style="width: 90%"></span></div>
+        </div>
+        <div class="skill">
+            E-commerce
+            <div class="skill-bar"><span style="width: 85%"></span></div>
+        </div>
+        <div class="skill">
+            Analytics
+            <div class="skill-bar"><span style="width: 80%"></span></div>
+        </div>
+        <div class="skill">
+            Web Design
+            <div class="skill-bar"><span style="width: 75%"></span></div>
+        </div>
+    </div>
+</section>
+
+<section id="experience" class="fade-in">
+    <h2 class="section-title">Work Experience</h2>
+    <div class="timeline">
+        <div class="timeline-item">
+            <h3>Senior Specialist</h3>
+            <p>Company Name (2023 - Present)</p>
+            <p>Led growth strategies and scaled online stores.</p>
+        </div>
+        <div class="timeline-item">
+            <h3>Marketing Executive</h3>
+            <p>Company Name (2021 - 2023)</p>
+            <p>Managed campaigns and improved conversion rates.</p>
+        </div>
+    </div>
+</section>
+
+<section id="projects" class="fade-in">
+    <h2 class="section-title">Projects</h2>
+    <div class="projects">
+        <div class="card">
+            <h3>Project One</h3>
+            <p>Built and scaled a successful dropshipping store generating consistent revenue.</p>
+        </div>
+        <div class="card">
+            <h3>Project Two</h3>
+            <p>Created an automated marketing funnel improving ROI by 40%.</p>
+        </div>
+        <div class="card">
+            <h3>Project Three</h3>
+            <p>Developed a responsive website optimized for conversions.</p>
+        </div>
+    </div>
+</section>
+
+<section id="education" class="fade-in">
+    <h2 class="section-title">Education</h2>
+    <p><strong>Bachelor's Degree</strong> - University Name (2018 - 2021)</p>
+</section>
+
+<section id="contact" class="contact fade-in">
+    <h2 class="section-title">Contact</h2>
+    <p>Email: <a href="mailto:[abdullahmemon6895@gmail.com]">[abdullahmemon6895@gmail.com]</a></p>
+    <p>
+        <a href="#">LinkedIn</a> |
+        <a href="#">GitHub</a> |
+        <a href="#">Twitter</a>
+    </p>
+</section>
+
+<footer>
+    © 2026 [Aman]. All Rights Reserved.
+</footer>
+
+<script>
+const faders = document.querySelectorAll('.fade-in');
+
+const appearOptions = {
+    threshold: 0.2
+};
+
+const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+            return;
+        } else {
+            entry.target.classList.add('show');
+            appearOnScroll.unobserve(entry.target);
+        }
+    });
+}, appearOptions);
+
+faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+});
+</script>
+
+</body>
+</html>
